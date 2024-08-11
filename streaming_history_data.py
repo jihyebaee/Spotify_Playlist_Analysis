@@ -38,6 +38,14 @@ sum_msPlayed = all_history.groupby(['trackName', 'artistName'], as_index=False)[
 # print(flower_tracks)
 
 
+# Sort sum_msPlayed by descending order
+sort_desc = sum_msPlayed.sort_values(by='msPlayed', ascending=False, ignore_index=True)
+print(sort_desc)
+
+# Check if there is any empty values in 'trackName' and 'artistName'
+check_empty = sort_desc[['trackName', 'artistName']].isnull().sum()
+print(check_empty)
+
 # Because Json file is nested
 with open('Playlist1.json',encoding='UTF-8') as json_file:
     data = json.load(json_file)
@@ -47,7 +55,7 @@ df_flattened = pd.json_normalize(data['playlists'], record_path='items', meta=['
 
 # Filter specific playlists
 filtered_playlists = df_flattened[df_flattened['name'].isin(["My playlist", "🇰🇷"])]
-print(filtered_playlists)
+# print(filtered_playlists)
 
 # Return only trackName and artistName
 item_names = filtered_playlists[['track.trackName', 'track.artistName']]
