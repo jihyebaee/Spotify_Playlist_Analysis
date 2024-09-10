@@ -1,4 +1,4 @@
-# Spotify_Playlist_Analysis
+# Spotify Playlist Analysis
 
 This project analyses my Spotify playlist using Python for data processing and Tableau for visualisation.\
 With over 400 songs in my playlist, many were frequently skipped.\
