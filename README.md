@@ -1,7 +1,7 @@
 # Spotify Playlist Analysis
 
 This project analyses my Spotify playlist using Python for data processing and Tableau for visualisation.\
-With over 400 songs in my playlist, many were frequently skipped.\
+With over 500 songs in my playlist, many were frequently skipped.\
 Although I was hesitant to remove them, fearing I might want to listen to them in the future,\
 I decided to reorganise my playlist by identifying frequently played songs and those that haven't been listend to recently.\
 This allows me to streamline the playlist for better listening experience without constantly skipping tracks.
